@@ -2,7 +2,7 @@
 session_start();
 
 if($_SESSION["s_usuario"]===null){
-    header("Location: ../login.php");
+    header("Location: login.php");
     }
 ?>
 
@@ -42,7 +42,11 @@ if($_SESSION["s_usuario"]===null){
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <h3>Usuario: <span ><?php echo $_SESSION["s_usuario"]; ?></span></h3>
+                    <div class="container">
+                        <h3 class="navbar-brand" >Usuario: <span ><?php echo $_SESSION["s_usuario"]; ?></span></h3>  
+                        <a class="btn btn-danger btn-md" href="bd/logout.php" role="button">Cerrar sesion</a> 
+                    </div>
+                    
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav ml-auto">
                             <a href="index.html" class="nav-item nav-link active">Inicio</a>
