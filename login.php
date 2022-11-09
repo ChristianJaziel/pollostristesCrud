@@ -34,7 +34,7 @@
                 <div id="login-row" class="row justify-content-center align-items-center ">
                     <div id="login-column" class="col-md-6">
                         
-                        <div id="login-box" class="col-md-12 bg-light text-dark"">
+                        <div id="login-box" class="col-md-12 bg-light text-dark">
                             <form action="" id="formlogin" class="form" method="post">
                                 <h3 class="text-center text-dark">Iniciar Sesion</h3>
                                 <div class="form-group">
@@ -47,6 +47,7 @@
                                 </div>
                                 <div class="form-group text-center">
                                     <input type="submit" value="Entrar" class="btn-dark btn-lg btn-block" name="submit">
+                                    <input type="submit" value="Registrarme" class="btn-dark btn-lg btn-block" name="registro">
                                 </div>
                             </form>
                         </div>

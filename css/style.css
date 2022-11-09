@@ -92,10 +92,10 @@ a:focus {
 /**********************************/
 /*********Estilos php login*****/
 #login .container #login-row #login-column #login-box{
-    margin-top: 70px;
+    margin-top: 60px;
     padding: 20px;
-    max-width: 633px;
-    height: 300px;
+    max-width: 733px;
+    height: 500px;
     box-shadow: 2px 2px 2px 2px #343a40;
     border-radius: 10px;
     opacity: 0.92;

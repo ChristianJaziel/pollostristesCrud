@@ -2,14 +2,22 @@ $('#formloginreg').submit(function(e){
     e.preventDefault();
     var user=$.trim($("#usuarior").val());
     var passw=$.trim($("#passwordr").val());
+    var passwc=$.trim($("#passwordrcon").val());
     console.log(user);
     console.log(passw);
-    if(user.length==""||passw.length==""){
+    if(user.length==""||passw.length==""||passwc.length==""){
         Swal.fire({
             icon: "error",
-            title:"Debe ingresar un usuario y password",
+            title:"Debes llenar todos los campos",
         });
-        return false;
+        if(passw===passwc){
+            echo("Las contraseñas son iguales");
+        }else{
+            echo("Las contraseñas no coinciden")
+            return false;
+        }
+       
+       
     }else{
         $.ajax({
             url:"bd/registrar.php",
