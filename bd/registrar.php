@@ -16,9 +16,9 @@ session_start();
     $usuarior = (isset($_POST['user'])) ? $_POST['user'] : '';
     $passwordr = (isset($_POST['passw'])) ? $_POST['passw'] : '';
 
-    $pass = md5($password); 
-    $cosulataregistro= "INSERT INTO usuarios (usuario,password) VALUES (:usuarior,:passwordr)";
-    $resultado= $my_Db_Connection->prepare($consultaregistro);
+    $pass = md5($passwordr); 
+    $consultaregistro= "INSERT INTO usuarios (usuario,password) VALUES ('$usuarior','$pass')";
+    $resultado= $my_Db_Connection->prepare( $consultaregistro);
 
     if($resultado->execute()){
         echo("La base de datos ha sido actualizada");

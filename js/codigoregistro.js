@@ -24,7 +24,7 @@ $('#formloginreg').submit(function(e){
                         confirmButtonText:'Ingresar',
                     }).then((result)=>{
                         if(result.value){
-                            window.location.href="index.php"
+                            window.location.href="login.php"
                             }
                         }                   
                     );
