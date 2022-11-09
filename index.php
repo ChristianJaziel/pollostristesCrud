@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if($_SESSION["s_usuario"]===null){
+    header("Location: ../login.php");
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -33,7 +42,7 @@
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
+                    <h3>Usuario: <span ><?php echo $_SESSION["s_usuario"]; ?></span></h3>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav ml-auto">
                             <a href="index.html" class="nav-item nav-link active">Inicio</a>

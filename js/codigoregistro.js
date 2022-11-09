@@ -1,10 +1,10 @@
-$('#formlogin').submit(function(e){
+$('#formloginreg').submit(function(e){
     e.preventDefault();
-    var usuario=$.trim($("#usuario").val());
-    var password=$.trim($("#password").val());
-    console.log(usuario);
-    console.log(password);
-    if(usuario.length==""||password.length==""){
+    var user=$.trim($("#usuarior").val());
+    var passw=$.trim($("#passwordr").val());
+    console.log(user);
+    console.log(passw);
+    if(user.length==""||passw.length==""){
         Swal.fire({
             icon: "error",
             title:"Debe ingresar un usuario y password",
@@ -12,20 +12,14 @@ $('#formlogin').submit(function(e){
         return false;
     }else{
         $.ajax({
-            url:"bd/login.php",
+            url:"bd/registrar.php",
             type:"POST",
             datatype: "json",
-            data: {usuario:usuario,password:password},
+            data: {user:user,passw:passw},
             success:function(data){
-                if(data=="null"){
-                    Swal.fire({
-                        icon:'error',
-                        title:'credenciales incorrectas'
-                    });
-                }else{
                     Swal.fire({
                         icon:'success',
-                        title:'La conexión es exitosa',
+                        title:'Registro exitoso',
                         confirmButtonColor:'#3085d6',
                         confirmButtonText:'Ingresar',
                     }).then((result)=>{
@@ -34,9 +28,7 @@ $('#formlogin').submit(function(e){
                             }
                         }                   
                     );
-                }
-            }
-            
+            }   
         });
     }
 });
