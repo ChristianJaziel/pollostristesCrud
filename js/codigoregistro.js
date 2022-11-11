@@ -10,15 +10,21 @@ $('#formloginreg').submit(function(e){
             icon: "error",
             title:"Debes llenar todos los campos",
         });
+        return false;
+    }else{
         if(passw===passwc){
-            echo("Las contraseñas son iguales");
+            Swal.fire({
+                icon: "success",
+                title:"Las contraseñas son iguales",
+            });
         }else{
-            echo("Las contraseñas no coinciden")
+            Swal.fire({
+                icon: "error",
+                title:"Las contraseñas no coinciden",
+            });
             return false;
         }
-       
-       
-    }else{
+        }
         $.ajax({
             url:"bd/registrar.php",
             type:"POST",
@@ -38,5 +44,5 @@ $('#formloginreg').submit(function(e){
                     );
             }   
         });
-    }
+    
 });
