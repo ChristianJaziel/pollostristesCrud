@@ -47,7 +47,7 @@
                                 </div>
                                 <div class="form-group text-center">
                                     <input type="submit" value="Entrar" class="btn-dark btn-lg btn-block" name="submit">
-                                    <input type="submit" value="Registrarme" class="btn-dark btn-lg btn-block" name="registro">
+                                <button type="button" onclick="location.href='registro.php';" class="btn-lg btn-block btn-dark">Registrarme</button>
                                 </div>
                             </form>
                         </div>

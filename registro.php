@@ -27,14 +27,14 @@
 </head>
     <body style="margin:150px;padding=150px;background-image:url('img/bgpollo.jpg');background-size:cover">
     
-        <div id="login">
+        <div id="loginr">
             <h1 class="text-center display-1 sh" style="color:yellow;border-radius:10px;">Registro</h1>
             <h2 class="text-center display-4 sh" style="color:red;border-radius:10px;">Pollos tristes</h2>
             <div class="container"> 
-                <div id="login-row" class="row justify-content-center align-items-center ">
-                    <div id="login-column" class="col-md-6">
+                <div id="login-rowr" class="row justify-content-center align-items-center ">
+                    <div id="login-columnr" class="col-md-6">
                         
-                        <div id="login-box" class="col-md-12 bg-light text-dark">
+                        <div id="login-boxr" class="col-md-12 bg-light text-dark">
                             <form action="" id="formloginreg" class="form" method="post">
                                 <h3 class="text-center text-dark">Registrarse</h3>
                                 <div class="form-group">

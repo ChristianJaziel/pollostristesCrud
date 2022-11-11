@@ -89,13 +89,28 @@ a:focus {
     font-size: inherit;
     margin-left: 0;
 }
+
+
+
+
+
 /**********************************/
 /*********Estilos php login*****/
 #login .container #login-row #login-column #login-box{
     margin-top: 60px;
     padding: 20px;
     max-width: 733px;
-    height: 500px;
+    height: 360px;
+    box-shadow: 2px 2px 2px 2px #343a40;
+    border-radius: 10px;
+    opacity: 0.92;
+}
+
+#loginr .container #login-rowr #login-columnr #login-boxr{
+    margin-top: 60px;
+    padding: 20px;
+    max-width: 733px;
+    height: 400px;
     box-shadow: 2px 2px 2px 2px #343a40;
     border-radius: 10px;
     opacity: 0.92;
@@ -866,7 +881,7 @@ h1.sh,h2.sh{
     line-height: 60px;
     margin-bottom: 15px;
     background-image: linear-gradient(#eaed38, #e03c1f);
-    -webkit-background-clip: text;
+    
     -webkit-text-fill-color: transparent;
 }
 
@@ -968,14 +983,14 @@ h1.sh,h2.sh{
 
 .menu .menu-text h3 span {
     display: inline-block;
-    float: left;
+    
     padding-right: 5px;
     background: #ffffff;
 }
 
 .menu .menu-text h3 strong {
     display: inline-block;
-    float: right;
+    
     padding-left: 5px;
     color: #e03c1f;
     background: #ffffff;
@@ -1711,7 +1726,7 @@ h1.sh,h2.sh{
 
 .sidebar .category-widget ul li span {
     display: inline-block;
-    float: right;
+   
 }
 
 .sidebar .sidebar-widget .tag-widget {
