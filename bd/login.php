@@ -11,13 +11,15 @@
     //encripto la clave enviada por el usuario para compararla con la 
     //clave que tambien va a estar encriptada y almacenada en la base de datos.
     $pass = md5($password); 
-    $consulta = "SELECT * FROM usuarios WHERE usuario='$usuario' AND password='$pass'";
+    $consulta = "SELECT usuarios.idrol AS idrol, roles.descripcion AS rol FROM usuarios JOIN roles ON usuarios.idrol = roles.id WHERE usuario='$usuario' AND password='$pass'";
     $resultado = $conexion->prepare($consulta);
     $resultado->execute();
 
     if($resultado->rowCount()>=1){
         $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
         $_SESSION["s_usuario"] = $usuario;
+        $_SESSION["s_idrol"] = $data[0]["idrol"];
+        $_SESSION["s_rol_descripcion"]= $data[0]["rol"];
     }else{
         $_SESSION["s_usuario"]= null;
         $data=null;
