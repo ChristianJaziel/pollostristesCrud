@@ -24,7 +24,7 @@ $('#formloginreg').submit(function(e){
             });
             return false;
         }
-        }
+        
         $.ajax({
             url:"bd/registrar.php",
             type:"POST",
@@ -44,5 +44,5 @@ $('#formloginreg').submit(function(e){
                     );
             }   
         });
-    
+        } 
 });
