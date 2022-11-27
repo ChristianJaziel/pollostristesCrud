@@ -5,7 +5,7 @@ if($_SESSION["s_usuario"]===null){
     header("Location: login.php");
     }else{
         if($_SESSION["s_idrol"]==1){
-            header("Location: dashboard.php");
+            header("Location: dashboard/admin.php");
         }
     }
 ?>

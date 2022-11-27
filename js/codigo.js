@@ -2,8 +2,6 @@ $('#formlogin').submit(function(e){
     e.preventDefault();
     var usuario=$.trim($("#usuario").val());
     var password=$.trim($("#password").val());
-    console.log(usuario);
-    console.log(password);
     if(usuario.length==""||password.length==""){
         Swal.fire({
             icon: "error",

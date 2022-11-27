@@ -17,7 +17,7 @@ session_start();
     $passwordr = (isset($_POST['passw'])) ? $_POST['passw'] : '';
 
     $pass = md5($passwordr); 
-    $consultaregistro= "INSERT INTO usuarios (usuario,password) VALUES ('$usuarior','$pass')";
+    $consultaregistro= "INSERT INTO usuarios (usuario,password,idrol) VALUES ('$usuarior','$pass',2)";
     $resultado= $my_Db_Connection->prepare( $consultaregistro);
 
     if($resultado->execute()){

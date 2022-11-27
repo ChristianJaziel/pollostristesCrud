@@ -1,0 +1,46 @@
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #b82208;
+}
+.contenedor {
+    width: 1200px;
+    margin: 0 auto;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h1 {
+    text-transform: uppercase;
+    font-size: 50px;
+    color: #ffffff;
+}
+.btnCerrarSesion, .btnEnviarNuevo, .btnVerSoli {
+    background-color: #e4e15b;
+    color: #000000;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 40px;
+    text-align: center;
+    align-content: flex-end;
+}
+.btnCerrarSesion:hover, .btnEnviarNuevo:hover, .btnVerSoli:hover {
+    background-color: #363062;
+    cursor: pointer;
+    transition: all 300ms;
+    
+}
+main {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
