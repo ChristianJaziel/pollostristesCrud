@@ -6,10 +6,10 @@ session_start();
 
 $idSolicitud = $_GET['id'];
 
-$SQL_DELETE = "DELETE FROM solicitudpollo WHERE id=$idSolicitud";
+$SQL_DELETE = "DELETE FROM solicitudbotarga WHERE idB=$idSolicitud";
 $resultado = mysqli_query($conn, $SQL_DELETE);
 if($resultado) {
-    header("location: solicitudesAdmin.php");
+    header("location: solicitudesAdminB.php");
 } else {
     echo "Failed: " . mysqli_error($conn);
 }

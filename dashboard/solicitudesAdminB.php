@@ -26,23 +26,23 @@ session_start();
 <body>
     <div class="contenedor">
         <div class="header">
-            <h1>Todos nuestros Pollos</h1>
+            <h1>Todas nuestras botargas</h1>
             <a href="../bd/logout.php" class="btnCerrarSesion">Cerrar sesión</a>
             <a href="admin.php" class="btnCerrarSesion">Atras</a>
         </div>
         <main>
             <?php
-            $solicitudes = mysqli_query($conn, "SELECT id, NombreComida, Precio  FROM solicitudpollo");
+            $solicitudes = mysqli_query($conn, "SELECT idB, NombreBotarga, PrecioB  FROM solicitudbotarga");
 
-            while ($solicitudpollo = mysqli_fetch_assoc($solicitudes)) {
+            while ($solicitudb = mysqli_fetch_assoc($solicitudes)) {
                 echo '
                     <div class="elemento">
-                        <p><span>Id:</span> ' . $solicitudpollo['id'] . '</p>' .
-                        '<p><span>Nombre comida:</span> ' . $solicitudpollo['NombreComida'] . '</p>' .
-                        '<p><span>Precio: $</span> ' . $solicitudpollo['Precio'] . '.0</p>' .
-                        '<a href="solicitudCompleta.php?id=' . $solicitudpollo['id'] . '">Ver Completo</a>' .
-                        '<a href="editar.php?id=' . $solicitudpollo['id'] . '">Modificar</a>' .
-                        '<a href="eliminar.php?id=' . $solicitudpollo['id'] . '">Eliminar</a>' .
+                        <p><span>Id:</span> ' . $solicitudb['idB'] . '</p>' .
+                        '<p><span>Nombre comida:</span> ' . $solicitudb['NombreBotarga'] . '</p>' .
+                        '<p><span>Precio: $</span> ' . $solicitudb['PrecioB'] . '.0</p>' .
+                        '<a href="solicitudCompletaB.php?id=' . $solicitudb['idB'] . '">Ver Completo</a>' .
+                        '<a href="editarB.php?id=' . $solicitudb['idB'] . '">Modificar</a>' .
+                        '<a href="eliminarB.php?id=' . $solicitudb['idB'] . '">Eliminar</a>' .
                     '</div>
                 ';
             }

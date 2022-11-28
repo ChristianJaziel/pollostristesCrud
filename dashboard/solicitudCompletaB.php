@@ -30,16 +30,16 @@ $idSolicitud = $_GET['id'];
 <body>
 
     <?php
-    $query  = mysqli_query($conn,"SELECT * FROM solicitudpollo WHERE id=$idSolicitud");
+    $query  = mysqli_query($conn,"SELECT * FROM solicitudbotarga WHERE idB=$idSolicitud");
     $result = mysqli_num_rows($query);
     if($result>0){
         while($data = mysqli_fetch_array($query)){
             ?>
             <div class="contenedor">
-            <h1>TREMEENDOS POLLOS</h1>
+            <h1>TREMENDAS BOTARGAS</h1>
             <div class="contenedor">
             <a href="../bd/logout.php" class="btnCerrarSesion">Cerrar sesión</a>
-            <a  href="solicitudesAdmin.php" class="btnCerrarSesion">Atras</a>
+            <a  href="solicitudesAdminB.php" class="btnCerrarSesion">Atras</a>
             </div>
                 
                 <br>
@@ -48,27 +48,27 @@ $idSolicitud = $_GET['id'];
                 <main>
                     <div class="campo">
                         <p><span>Id</span></p>
-                        <?php echo $data['id']   ?>
+                        <?php echo $data['idB']   ?>
                     </div>
 
                     <div class="campo">
-                        <p><span>Nombre de tremenda delicia</span></p>
-                    <?php echo $data['NombreComida']   ?>
+                        <p><span>Nombre de tremenda botarga</span></p>
+                    <?php echo $data['NombreBotarga']   ?>
                     </div>
 
                     <div class="campo">
                     <p><span>Coste</span></p>
-                    <span>$<?php echo $data['Precio']   ?> .0 MXN</span>
+                    <span>$<?php echo $data['PrecioB']   ?> .0 MXN</span>
                     </div>
 
                     <div class="campo">
-                    <p><span>Ligera descripcion del platillo</span></p>
-                    <?php echo $data['Descripcion']   ?>
+                    <p><span>Descripcion del servicio</span></p>
+                    <?php echo $data['DescripcionB']   ?>
                     </div>
 
                     <div class="campo">
-                        <p><span>Fotito del platillo</span></p>
-                        <img height="auto" src="data:image/jpg;base64,   <?php echo base64_encode($data['imagen'])   ?>" alt="">
+                        <p><span>Fotito de la botarga</span></p>
+                        <img height="auto" src="data:image/jpg;base64,   <?php echo base64_encode($data['imagenB'])   ?>" alt="">
                     
                     </div>
 

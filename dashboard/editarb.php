@@ -11,11 +11,11 @@ if (isset($_POST['submit'])) {
     $precio = $_POST['precio'];
     $descripcion = $_POST['descripcion'];
 
-    $SQL_UPDATE = "UPDATE solicitudpollo SET NombreComida='$nombre', Precio='$precio', Descripcion='$descripcion' WHERE id=$idSolicitud";
+    $SQL_UPDATE = "UPDATE solicitudbotarga SET NombreBotarga='$nombre', PrecioB='$precio', DescripcionB='$descripcion' WHERE idB=$idSolicitud";
 
     $result = mysqli_query($conn, $SQL_UPDATE);
 
-    header("location: solicitudesAdmin.php");
+    header("location: solicitudesAdminB.php");
 }
 ?>
 
@@ -39,21 +39,21 @@ if (isset($_POST['submit'])) {
         <div class="header">
             <h1 style="text-align:center;">Modifícalo a tu gusto chaval</h1>
             <a href="../bd/logout.php" id="btnCerrarSesion">Cerrar sesiÃ³n</a>
-            <a href="solicitudesAdmin.php" id="btnCerrarSesion">Atras</a>
+            <a href="solicitudesAdminB.php" id="btnCerrarSesion">Atras</a>
         </div>
         <h2>Cambia tu platillo pa</h2>
         <?php
-        $SQL_SELECT = "SELECT * FROM solicitudpollo WHERE id=$idSolicitud LIMIT 1";
+        $SQL_SELECT = "SELECT * FROM solicitudbotarga WHERE idB=$idSolicitud LIMIT 1";
         $result = mysqli_query($conn, $SQL_SELECT);
         $solicitud = mysqli_fetch_assoc($result);
         ?>
         <form action="#" class="formulario" method="POST">
             <br>
-            <input style="height: 30px;" type="text" name="nombre" value="<?php echo $solicitud['NombreComida']?>">
-            <input style="height: 30px;" type="number" name="precio" value="<?php echo $solicitud['Precio']?>" >
-            <input style="height: 90px;" type="text" name="descripcion" value="<?php echo $solicitud['Descripcion']?>" ?>
+            <input style="height: 30px;" type="text" name="nombre" value="<?php echo $solicitud['NombreBotarga']?>">
+            <input style="height: 30px;" type="number" name="precio" value="<?php echo $solicitud['PrecioB']?>" >
+            <input style="height: 90px;" type="text" name="descripcion" value="<?php echo $solicitud['DescripcionB']?>" ?>
             <div class="campo">
-                <img height="auto" src="data:image/jpg;base64,   <?php echo base64_encode($solicitud['imagen'])   ?>" alt="">        
+                <img height="auto" src="data:image/jpg;base64,   <?php echo base64_encode($solicitud['imagenB'])   ?>" alt="">        
              </div>
             <input type="submit" value="Actualizar" name="submit">
         </form>

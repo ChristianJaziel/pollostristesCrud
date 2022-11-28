@@ -23,9 +23,9 @@
         </div>
         <main>
             <a href="solicitudpollos.php" class="btnEnviarNuevo">Agregar un nuevo pollito</a>  
-            <a href="solicitud.php" class="btnEnviarNuevo">Agregar botarga</a>
+            <a href="solicitudbotarga.php" class="btnEnviarNuevo">Agregar botarga</a>
             <a href="solicitudesAdmin.php" class="btnVerSoli">Ver todos los pollos.. Ay! canijo</a>
-            <a href="solicitudesAdmin.php" class="btnVerSoli">Ver todas las botargas.. Ay! caray</a>
+            <a href="solicitudesAdminB.php" class="btnVerSoli">Ver todas las botargas.. Ay! caray</a>
         </main>
     </div>
 </body>

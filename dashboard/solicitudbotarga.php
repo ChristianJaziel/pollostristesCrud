@@ -7,11 +7,11 @@ if (isset($_POST['submit'])) {
         $nombre = $_POST['nombre'];
         $precio = $_POST['precio'];
         $descripcion = $_POST['descripcion'];
-        $SQL_INSERT = "INSERT INTO solicitudpollo(
-            NombreComida,
-            Precio,
-            Descripcion,
-            imagen) VALUES (
+        $SQL_INSERT = "INSERT INTO solicitudbotarga(
+            NombreBotarga,
+            PrecioB,
+            DescripcionB,
+            imagenB) VALUES (
                 '$nombre',
                 '$precio',
                 '$descripcion',
@@ -41,17 +41,17 @@ if (isset($_POST['submit'])) {
 <body>
     <div class="contenedor">
         <div class="header">
-            <h1>REGISTRO DE POLLITOS </h1>
+            <h1>REGISTRO DE BOTARGAS </h1>
             <a href="cerrar_sesion.php" id="btnCerrarSesion">Cerrar sesi√≥n</a>
             <a href="admin.php" id="btnCerrarSesion">Atras</a>
         </div>
         <form action="#" class="formulario" method="POST" enctype="multipart/form-data">
             <!-- Nombre -->
-            <label>AÒade tu platillo carnal</label>
+            <label>Agrega a la coleccion nueva tu botarga</label>
             <br>
-            <input style="height: 30px;" type="text" name="nombre" placeholder="Como se va a llamar tu pollito?">
-            <input style="height: 30px;" type="number" name="precio" placeholder="Precio de la chulada.">
-            <input style="height: 90px;" type="text" name="descripcion" placeholder="Descripcion del platillo, !ay padrino que rico">
+            <input style="height: 30px;" type="text" name="nombre" placeholder="Nombre de tu chulada pa?">
+            <input style="height: 30px;" type="number" name="precio" placeholder="Precio de tremenda botarga.">
+            <input style="height: 90px;" type="text" name="descripcion" placeholder="Descripcion del servicio ">
             <input class="input-img" style="height: 90px;" type="file" name="img" placeholder="Fotito">
             <input  style="height: 50px;" type="submit" value="Enviar solicitud" name="submit">
         </form>
