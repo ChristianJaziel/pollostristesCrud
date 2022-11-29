@@ -1,3 +1,6 @@
+<?php
+include('bd/conexion.php');
+?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -258,7 +261,18 @@
                         <div class="feature-text">
                             <div class="feature-img">
                                 <div class="row">
-                                    <div class="col-6">
+                                    <?php
+                                    $query  = mysqli_query($conexion,"SELECT * FROM solicitudpollo");
+                                    $result = mysqli_num_rows($query);
+                                    while($data = mysqli_fetch_array($query)){
+                                    ?>
+                                     <div class="col-6">
+                                        <img src="idata:image/jpg;base64,   <?php echo base64_encode($data['imagen'])   ?>" alt="Image">
+                                    </div>
+                                    <?php
+                                    }
+                                    ?>
+                            <!--      <div class="col-6">
                                         <img src="img/feature-1.jpg" alt="Image">
                                     </div>
                                     <div class="col-6">
@@ -270,6 +284,7 @@
                                     <div class="col-6">
                                         <img src="img/feature-4.jpg" alt="Image">
                                     </div>
+                                    -->   
                                 </div>
                             </div>
                             <p>
