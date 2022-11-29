@@ -2,7 +2,7 @@
 session_start();
     $server="localhost";
     $nombre_bd="login";
-    $usuarioo="root";
+    $usuarioo="id19929224_root";
     $pas="";
     $sql = "mysql:host=$server;dbname=$nombre_bd;";
     $dsn_Options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];

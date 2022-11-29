@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+if($_SESSION["s_usuario"]===null){
+    header("Location: login.php");
+    }else{
+        if($_SESSION["s_idrol"]==1){
+            header("Location: dashboard/admin.php");
+        }
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -34,7 +47,8 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="container">
-                        <a class="btn btn-danger btn-md" href="registro.php" role="button">Registro</a> 
+                        <h3 class="navbar-brand" >Usuario: <span ><?php echo $_SESSION["s_usuario"]; ?></span></h3>  
+                        <a class="btn btn-danger btn-md" href="bd/logout.php" role="button">Cerrar sesion</a> 
                     </div>
                     
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
